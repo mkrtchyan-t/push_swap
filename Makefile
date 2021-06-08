@@ -3,7 +3,7 @@ CHECKER		= checker
 CC			= gcc
 FLAGS		= -Wall -Wextra -Werror
 
-SRCS_PS		=	push_swap.c ft_stack_print.c error_check.c stacking.c mini_sort.c \
+SRCS_PS		=	push_swap.c error_check.c stacking.c mini_sort.c \
 				instructions.c instructions2.c instructions3.c stack_control.c \
 				ft_quicksort.c sort.c sort2.c ft_error.c
 # SRCS_CH		=	checker.c get_next_line.c

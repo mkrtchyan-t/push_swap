@@ -23,7 +23,6 @@ int		error_check(int argc, char **argv)
 	{
 		if (ft_only_spaces(argv[i]))
 		{
-			// ft_check_int_overflow(argv[i]);
 			ft_check_str(argv[i]);
 			ret = 1;
 		}
@@ -31,25 +30,6 @@ int		error_check(int argc, char **argv)
 	}
 	return (ret);
 }
-
-// void	ft_check_int_overflow(char *str)
-// {
-// 	int	i;
-
-// 	i = 0;
-// 	while (str[i] != '\0')
-// 	{
-// 		if (ft_isdigit(str[i]))
-// 			return ;
-// 		i++;
-// 	}
-// 	ft_error();
-// }
-
-// void	ft_check_int_overflow(char *str)
-// {
-
-// }
 
 void	ft_check_str(char *str)
 {

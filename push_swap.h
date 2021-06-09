@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _PUSH_SWAP_
-# define _PUSH_SWAP_
+#ifndef PUSH_SWAP_H
+# define PUSH_SWAP_H
 
 # include <stdio.h>
 # include <unistd.h>
@@ -20,7 +20,7 @@
 
 # define BUFF_SIZE 32
 
-typedef struct		s_stack
+typedef struct s_stack
 {
 	int				data;
 	int				step;
@@ -28,7 +28,7 @@ typedef struct		s_stack
 	struct s_stack	*next;
 }					t_stack;
 
-typedef struct		s_stacks
+typedef struct s_stacks
 {
 	int				count_a;
 	int				count_b;
@@ -39,7 +39,7 @@ typedef struct		s_stacks
 	t_stack			*b;
 }					t_stacks;
 
-typedef struct		s_steps
+typedef struct s_steps
 {
 	int				count_a;
 	int				count_b;
@@ -47,7 +47,7 @@ typedef struct		s_steps
 	int				dest_b;
 }					t_steps;
 
-typedef struct		s_data
+typedef struct s_data
 {
 	int				a[10000];
 	int				count_element;
@@ -82,8 +82,10 @@ void				ft_start_sort(t_stacks *stacks);
 void				ft_step(t_stack *b, int count);
 void				ft_min_step(t_stacks *stacks, t_steps *steps);
 void				ft_exec(t_stacks *stacks, t_steps *steps);
-int					ft_find_place(t_stacks *s, t_stack *b, t_steps *steps, int min);
-void				ft_find_place_helper(t_stacks *s, t_stack *b, int *action, int *buff);
+int					ft_find_place(
+						t_stacks *s, t_stack *b, t_steps *steps, int min);
+void				ft_find_place_helper(
+						t_stacks *s, t_stack *b, int *action, int *buff);
 int					ft_smaller(t_stack *a, int buff, int src);
 int					ft_min_count(t_stack *a, int min);
 int					get_next_line(const int fd, char **line);

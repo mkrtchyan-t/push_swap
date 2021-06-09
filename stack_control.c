@@ -19,14 +19,16 @@ t_stack	*ft_create_stack(int *buff, int count)
 	t_stack	*first;
 
 	i = 0;
-	if (!(new_list = (t_stack *)malloc(sizeof(t_stack))))
+	new_list = (t_stack *)malloc(sizeof(t_stack));
+	if (!new_list)
 		exit(1);
 	first = new_list;
 	while (i < count)
 	{
 		if (i < count - 1)
 		{
-			if (!(new_list->next = (t_stack *)malloc(sizeof(t_stack))))
+			new_list->next = (t_stack *)malloc(sizeof(t_stack));
+			if (!new_list->next)
 				exit(1);
 		}
 		new_list->data = buff[i];

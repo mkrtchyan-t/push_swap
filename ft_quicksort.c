@@ -14,18 +14,18 @@
 
 void	swap(int *a, int *b)
 {
-	int tmp;
+	int	tmp;
 
 	tmp = *a;
 	*a = *b;
 	*b = tmp;
 }
 
-int		partition(int *array, int low, int high)
+int	partition(int *array, int low, int high)
 {
 	int	pivot;
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	pivot = array[high];
 	i = low - 1;
@@ -45,7 +45,7 @@ int		partition(int *array, int low, int high)
 
 void	ft_quicksort(int *array, int first, int last)
 {
-	int pi;
+	int	pi;
 
 	if (first < last)
 	{

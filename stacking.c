@@ -46,7 +46,8 @@ void	ft_separate(int ac, char **av, t_data *new)
 		p = -1;
 		count = ft_countword(av[i]);
 		mass = ft_strsplit(av[i], count);
-		if (!(buff = (int *)malloc(sizeof(int) * (count))))
+		buff = (int *)malloc(sizeof(int) * (count));
+		if (!buff)
 			exit(1);
 		while (count > ++p)
 		{

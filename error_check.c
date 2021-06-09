@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-int		error_check(int argc, char **argv)
+int	error_check(int argc, char **argv)
 {
 	int	i;
 	int	ret;
@@ -51,8 +51,8 @@ void	ft_check_str(char *str)
 			nbr = 0;
 			sign = 0;
 		}
-		else if (((str[i] == '+' || str[i] == '-') &&
-				(sign == 0 && nbr == 0)) && (str[i + 1] != '\0'))
+		else if (((str[i] == '+' || str[i] == '-')
+				&& (sign == 0 && nbr == 0)) && (str[i + 1] != '\0'))
 			sign++;
 		else
 			ft_error();
@@ -62,7 +62,7 @@ void	ft_check_str(char *str)
 
 void	ft_search_duplicate(const int *dup, int count)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i != count)
@@ -77,7 +77,8 @@ void	ft_duplicate_check(t_data *new, t_stacks *stacks)
 {
 	int			*dup;
 
-	if (!(dup = (int *)malloc(sizeof(int) * (new->count_element))))
+	dup = (int *)malloc(sizeof(int) * (new->count_element));
+	if (!dup)
 		ft_error();
 	dup = ft_intcpy(dup, new->a, new->count_element);
 	ft_quicksort(dup, 0, new->count_element - 1);

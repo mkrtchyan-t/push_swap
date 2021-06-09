@@ -48,7 +48,7 @@ static int	returns(char **str, char **line, int val, int fd)
 		return (finish(&str[fd], line));
 }
 
-int			get_next_line(const int fd, char **line)
+int	get_next_line(const int fd, char **line)
 {
 	int			val;
 	static char	*str[12000];

@@ -20,7 +20,7 @@ void	rrr(t_stacks *s, int i)
 		write(1, "rrr\n", 4);
 }
 
-int		ft_is_sorted(t_data *new)
+int	ft_is_sorted(t_data *new)
 {
 	int	i;
 
@@ -34,9 +34,9 @@ int		ft_is_sorted(t_data *new)
 	return (0);
 }
 
-int		ft_only_spaces(const char *str)
+int	ft_only_spaces(const char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')

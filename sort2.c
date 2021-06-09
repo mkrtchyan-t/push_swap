@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-int		ft_smaller(t_stack *a, int buff, int src)
+int	ft_smaller(t_stack *a, int buff, int src)
 {
 	t_stack	*tmp;
 	int		ret;
@@ -55,7 +55,7 @@ void	ft_find_place_helper(t_stacks *s, t_stack *b, int *action, int *buff)
 	}
 }
 
-int		ft_find_place(t_stacks *s, t_stack *b, t_steps *steps, int min)
+int	ft_find_place(t_stacks *s, t_stack *b, t_steps *steps, int min)
 {
 	int	action;
 	int	ret;
@@ -79,7 +79,7 @@ int		ft_find_place(t_stacks *s, t_stack *b, t_steps *steps, int min)
 	return (ret);
 }
 
-int		ft_min_count(t_stack *a, int min)
+int	ft_min_count(t_stack *a, int min)
 {
 	int	i;
 

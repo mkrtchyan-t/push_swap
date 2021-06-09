@@ -30,25 +30,27 @@ $(OBJ_DIR)%.o: %.c
 
 $(PUSH_SWAP): $(OBJ_FILESPS)
 	@$(CC) $(LIBFT) $(OBJ_FILESPS) -o $@
-	@echo "$(GREEN) libft.a created! $(RESET)"
-	@echo "$(GREEN) objects created! $(RESET)"
-	@echo "$(GREEN) $@ created! $(RESET)"
+	@echo "$(GREEN) libft.a	created! $(RESET)"
+	@echo "$(GREEN) objects	created! $(RESET)"
+	@echo "$(GREEN) $@	created! $(RESET)"
 
 $(CHECKER): $(OBJ_FILESCH)
 	@$(CC) $(LIBFT) $(OBJ_FILESCH) -o $@
-	@echo "$(GREEN) $@ created! $(RESET)"
+	@echo "$(GREEN) $@	created! $(RESET)"
 
 clean:
 	@make -C ./libft clean --silent
 	@rm -rf $(OBJ_DIR) --silent
-	@echo "$(RED) libft.a deleted! $(RESET)"
-	@echo "$(RED) objectcs deleted! $(RESET)"
+	@echo "$(RED) libft.a	deleted! $(RESET)"
+	@echo "$(RED) objectcs	deleted! $(RESET)"
 
 fclean: clean
 	@rm -rf $(PUSH_SWAP) --silent
+	@rm -rf $(CHECKER) --silent
 	@rm -rf $(LIBFT) --silent
-	@echo "$(RED) $(PUSH_SWAP) deleted! $(RESET)"
+	@echo "$(RED) $(PUSH_SWAP)	deleted! $(RESET)"
+	@echo "$(RED) $(CHECKER)	deleted! $(RESET)"
 
-re:	clean all
+re:	fclean all
 
 .PHONY: all clean fclean re

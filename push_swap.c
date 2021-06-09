@@ -22,16 +22,18 @@ void	ft_coordinate(t_stacks *stacks)
 		ft_global_sort(stacks);
 }
 
-int		main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	t_data		*new;
 	t_stacks	*stacks;
 
 	if (ac < 2)
 		exit(1);
-	if (!(new = (t_data *)malloc(sizeof(t_data))))
+	new = (t_data *)malloc(sizeof(t_data));
+	if (!new)
 		exit(1);
-	if (!(stacks = (t_stacks *)malloc(sizeof(t_stacks))))
+	stacks = (t_stacks *)malloc(sizeof(t_stacks));
+	if (!stacks)
 		exit(1);
 	if (error_check(ac, av))
 	{
@@ -43,7 +45,6 @@ int		main(int ac, char **av)
 			ft_coordinate(stacks);
 		}
 	}
-	// ft_stack_print(stacks->a);
 	free(new);
 	free(stacks);
 	return (0);

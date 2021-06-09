@@ -80,7 +80,8 @@ void	ft_start_sort(t_stacks *stacks)
 {
 	t_steps	*step;
 
-	if (!(step = (t_steps *)malloc(sizeof(t_steps))))
+	step = (t_steps *)malloc(sizeof(t_steps));
+	if (!step)
 		exit(1);
 	while (stacks->count_b != 0)
 	{
@@ -94,15 +95,11 @@ void	ft_start_sort(t_stacks *stacks)
 		ft_exec(stacks, step);
 	}
 	if ((ft_min_count(stacks->a, stacks->min)) > stacks->count_a / 2)
-	{
 		while (stacks->a->data != stacks->min)
 			rra(&stacks->a, 1);
-	}
 	else
-	{
 		while (stacks->a->data != stacks->min)
 			ra(&stacks->a, 1);
-	}
 	free(step);
 }
 

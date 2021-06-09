@@ -42,7 +42,7 @@ void	ft_instructions(t_stacks *s, char *str)
 
 void	ft_read_line(t_stacks *s)
 {
-	char *line;
+	char	*line;
 
 	line = NULL;
 	while (get_next_line(0, &line))
@@ -58,7 +58,7 @@ void	ft_read_line(t_stacks *s)
 	}
 }
 
-int		ft_stack_sorted(t_stacks *s)
+int	ft_stack_sorted(t_stacks *s)
 {
 	int		i;
 	int		buff;
@@ -81,7 +81,7 @@ int		ft_stack_sorted(t_stacks *s)
 	return (1);
 }
 
-int		main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_data		*new;
 	t_stacks	*stacks;

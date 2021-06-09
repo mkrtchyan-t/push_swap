@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-int		ft_max(t_stack *s)
+int	ft_max(t_stack *s)
 {
 	int	max;
 
@@ -29,6 +29,7 @@ int		ft_max(t_stack *s)
 void	ft_sort_3(t_stacks *stacks)
 {
 	int	max;
+
 	max = ft_max(stacks->a);
 	if (stacks->count_a == 1)
 		return ;
